@@ -3,12 +3,12 @@ import DashboardLayout from "@/layouts/DashboardLayout";
 
 // Admin Pages
 import Dashboard from "@/pages/admin/Dashboard";
-// import Orders from "@/pages/admin/Orders";
-// import OrderDetail from "@/pages/admin/OrderDetail";
+import Orders from "@/pages/admin/Orders";
+import OrderDetail from "@/pages/admin/OrderDetail";
 
 // User Pages
-// import MyOrders from "@/pages/user/MyOrders";
-// import OrderTracking from "@/pages/user/OrderTracking";
+import MyOrders from "@/pages/user/MyOrder";
+import OrderTracking from "@/pages/user/OrderTracking";
 
 // ─── Add new pages here ───────────────────────────────────────────────────────
 // import Settings from "@/pages/Settings";
@@ -40,9 +40,9 @@ export default function App() {
 				</Route>
 
 				{/* Shared Routes */}
-				{/* <Route path="/settings" element={<DashboardLayout />}> */}
-				{/*   <Route index element={<Settings />} /> */}
-				{/* </Route> */}
+				<Route path="/settings" element={<DashboardLayout />}>
+					{/*   <Route index element={<Settings />} /> */}
+				</Route>
 			</Routes>
 		</BrowserRouter>
 	);

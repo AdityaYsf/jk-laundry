@@ -56,7 +56,7 @@ export default function Sidebar() {
   const isAdmin = location.pathname.startsWith("/admin");
 
   return (
-    <aside className="flex flex-col h-full w-72px bg-white border-r border-border shadow-sm py-5 items-center gap-2 fixed left-0 top-0 z-40">
+    <aside className="flex flex-col h-full w-[72px] bg-white border-r border-border shadow-sm py-5 items-center gap-2 fixed left-0 top-0 z-40">
       {/* Logo */}
       <div className="mb-6 flex items-center justify-center w-10 h-10 rounded-xl bg-sky-500 shadow-md shadow-sky-200">
         <WashingMachine className="text-white" size={20} />

@@ -56,50 +56,50 @@ export default function Sidebar() {
   const isAdmin = location.pathname.startsWith("/admin");
 
   return (
-    <aside className="flex flex-col h-full w-[72px] bg-white border-r border-border shadow-sm py-5 items-center gap-2 fixed left-0 top-0 z-40">
-      {/* Logo */}
-      <div className="mb-6 flex items-center justify-center w-10 h-10 rounded-xl bg-sky-500 shadow-md shadow-sky-200">
-        <WashingMachine className="text-white" size={20} />
-      </div>
+		<aside className="flex flex-col h-full w-18 bg-white border-r border-border shadow-sm py-5 items-center gap-2 fixed left-0 top-0 z-40">
+			{/* Logo */}
+			<div className="mb-6 flex items-center justify-center w-10 h-10 rounded-xl bg-sky-500 shadow-md shadow-sky-200">
+				<WashingMachine className="text-white" size={20} />
+			</div>
 
-      {/* Divider */}
-      <div className="w-8 h-px bg-border mb-2" />
+			{/* Divider */}
+			<div className="w-8 h-px bg-border mb-2" />
 
-      {/* Admin Nav */}
-      {isAdmin ? (
-        <nav className="flex flex-col gap-1 w-full items-center px-2">
-          {adminNavItems.map((item) => (
-            <SidebarItem key={item.path} item={item} />
-          ))}
-        </nav>
-      ) : (
-        <nav className="flex flex-col gap-1 w-full items-center px-2">
-          {userNavItems.map((item) => (
-            <SidebarItem key={item.path} item={item} />
-          ))}
-        </nav>
-      )}
+			{/* Admin Nav */}
+			{isAdmin ? (
+				<nav className="flex flex-col gap-1 w-full items-center px-2">
+					{adminNavItems.map((item) => (
+						<SidebarItem key={item.path} item={item} />
+					))}
+				</nav>
+			) : (
+				<nav className="flex flex-col gap-1 w-full items-center px-2">
+					{userNavItems.map((item) => (
+						<SidebarItem key={item.path} item={item} />
+					))}
+				</nav>
+			)}
 
-      {/* Spacer */}
-      <div className="flex-1" />
+			{/* Spacer */}
+			<div className="flex-1" />
 
-      {/* Divider */}
-      <div className="w-8 h-px bg-border mb-2" />
+			{/* Divider */}
+			<div className="w-8 h-px bg-border mb-2" />
 
-      {/* Bottom Nav */}
-      <nav className="flex flex-col gap-1 w-full items-center px-2">
-        {bottomNavItems.map((item) => (
-          <SidebarItem key={item.path} item={item} />
-        ))}
-        <button
-          className="w-full flex items-center justify-center p-2.5 rounded-xl text-muted-foreground hover:bg-red-50 hover:text-red-500 transition-colors duration-200 group"
-          title="Logout"
-        >
-          <LogOut size={20} />
-        </button>
-      </nav>
-    </aside>
-  );
+			{/* Bottom Nav */}
+			<nav className="flex flex-col gap-1 w-full items-center px-2">
+				{bottomNavItems.map((item) => (
+					<SidebarItem key={item.path} item={item} />
+				))}
+				<button
+					className="w-full flex items-center justify-center p-2.5 rounded-xl text-muted-foreground hover:bg-red-50 hover:text-red-500 transition-colors duration-200 group"
+					title="Logout"
+				>
+					<LogOut size={20} />
+				</button>
+			</nav>
+		</aside>
+	);
 }
 
 function SidebarItem({ item }) {
